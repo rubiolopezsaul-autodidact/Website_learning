@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crankset Bike Repair – Sample small business site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f4ee; --surface:#ffffff; --text:#1d2a2e; --muted:#53636a;
+  --brand:#0f4c5c; --brand-text:#ffffff; --accent:#f2b705; --accent-text:#1d2a2e; --line:#d9d6cb;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101c20; --surface:#17272c; --text:#eef1ee; --muted:#a2b2b8;
+    --brand:#7cc4d4; --brand-text:#101c20; --accent:#f2b705; --accent-text:#1d2a2e; --line:#2b3f45;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101c20; --surface:#17272c; --text:#eef1ee; --muted:#a2b2b8;
+  --brand:#7cc4d4; --brand-text:#101c20; --accent:#f2b705; --accent-text:#1d2a2e; --line:#2b3f45;
+  color-scheme: dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;font-size:1.0625rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1rem;padding-bottom:1rem}
+.logo{font-weight:800;font-size:1.25rem;text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:600}
+nav a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-text);font-weight:800;padding:.85rem 1.5rem;border-radius:.5rem;text-decoration:none}
+.btn:hover{filter:brightness(1.07)}
+.hero{padding:4.5rem 0 4rem}
+.hero h1{font-size:clamp(2.6rem,8vw,5.5rem);line-height:1;letter-spacing:-.035em;font-weight:800;margin:0 0 1.25rem;max-width:12ch;color:var(--brand)}
+.hero p{max-width:34rem;color:var(--muted);font-size:1.2rem;margin:0 0 2rem}
+.hero .actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.hero .actions span{color:var(--muted)}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.02em;margin:0 0 .5rem;line-height:1.15}
+.lead{color:var(--muted);margin:0 0 2rem;max-width:36rem}
+.menu{list-style:none;margin:0;padding:0;max-width:40rem}
+.menu li{display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.menu .name{font-weight:600}
+.menu .desc{display:block;color:var(--muted);font-size:.95rem;font-weight:400}
+.menu .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-.3rem);min-width:1rem}
+.menu .price{font-weight:800;white-space:nowrap}
+.about{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:48rem){.about{grid-template-columns:1.2fr 1fr}}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.5rem}
+.quote p{margin:0 0 .75rem}
+.quote cite{color:var(--muted);font-style:normal;font-size:.95rem}
+.contact{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:48rem){.contact{grid-template-columns:1fr 1fr}}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:.45rem 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.big{font-size:1.6rem;font-weight:800;letter-spacing:-.01em;margin:.25rem 0}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2rem;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Crankset Bike Repair</a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>Your bike, back on the road.</h1>
+    <p>Friendly, honest repairs for commuters, families and weekend riders. Most jobs are finished in two days or less.</p>
+    <div class="actions">
+      <a class="btn" href="#contact">Book a repair</a>
+      <span>Walk-ins welcome Tuesday to Saturday</span>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>Services and prices</h2>
+      <p class="lead">Every price includes labor. We call you before doing any work that isn’t on this list.</p>
+      <ul class="menu">
+        <li><span><span class="name">Basic tune-up</span><span class="desc">Brakes, gears, tire pressure, chain lube</span></span><span class="dots"></span><span class="price">$65</span></li>
+        <li><span><span class="name">Full overhaul</span><span class="desc">Everything in a tune-up, plus a deep clean and wheel true</span></span><span class="dots"></span><span class="price">$180</span></li>
+        <li><span><span class="name">Flat tire fix</span><span class="desc">New tube or patch, fitted and inflated</span></span><span class="dots"></span><span class="price">$15</span></li>
+        <li><span><span class="name">Brake or gear adjustment</span><span class="desc">Quick fix while you wait</span></span><span class="dots"></span><span class="price">$25</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>A small shop that treats every bike seriously</h2>
+        <p>Crankset has been fixing bikes since 2014. We’re a team of three mechanics who ride to work, and we’d rather explain a repair than upsell you on one.</p>
+        <p>Bring in anything from a kid’s first bike to a daily commuter. If it can’t be fixed, we’ll tell you so before you pay.</p>
+      </div>
+      <figure class="quote" style="margin:0">
+        <p>“They fixed my brakes in an afternoon and showed me what was wrong. Fair price, no pressure.”</p>
+        <cite>Maria T., customer since 2019</cite>
+      </figure>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Visit or get in touch</h2>
+        <p class="lead">Drop by, call, or send an email and we’ll reply within one business day.</p>
+        <p class="big"><a href="tel:+15555550123">(555) 555-0123</a></p>
+        <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p>123 Example Street<br>Sampletown</p>
+      </div>
+      <div>
+        <h2>Opening hours</h2>
+        <table class="hours">
+          <tbody>
+            <tr><td>Monday</td><td>Closed</td></tr>
+            <tr><td>Tuesday to Friday</td><td>9 am to 6 pm</td></tr>
+            <tr><td>Saturday</td><td>10 am to 4 pm</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Crankset Bike Repair. This is a sample page with made-up details.</div>
+</footer>
+</body>
+</html>
